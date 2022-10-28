@@ -125,11 +125,12 @@ public class Computer {
 	
 	public static void main(String[] args) {
 		int option;
-		char choice;
 		
-		do {
+		
+		while(true) {
 		System.out.println("\nPRESS 1 TO INPUT YOUR COMPUTER'S INFO");
 		System.out.println("PRESS 2 TO DISPLAY YOUR COMPUTER'S INFO");
+		System.out.println("PRESS 3 TO EXIT");
 		option = sc.nextInt();
 			switch(option) {
 				case 1:
@@ -139,11 +140,16 @@ public class Computer {
 				case 2:
 					display();
 					break;
+
+				case 3:
+					return;
+
+				default:
+					System.out.println("INVALID OPTION ENTERED!");
+					break;
 			}
 		
-		System.out.print("Do You Want To Go To The Main Menu Again?(Press Y or N): ");
-		choice = sc.next().charAt(0);
-		}while(choice == 'y' || choice == 'Y' );
+		}
 		
 	}
 

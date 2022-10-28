@@ -1,8 +1,4 @@
 
-import java.util.Scanner;
-
-
-
 public class Book {
 	
 	private String title,author;
